@@ -21,26 +21,34 @@
   Novo paciente
 </button>
 
-{% for paciente in pacientes %}
-{{paciente}}
-{% endfor %}
+
 
 <br>
 <br>
 <div  class="row">
 
+    {% for paciente in pacientes%}
     <div class="col-md-4">
         <a href="#" class="link-hover">
             <div class="card-paciente">
                 <div class="foto-perfil">
-                    <img src="{% static 'plataforma/img/perfil2.png' %}">
+                   
+                    {% if paciente.sexo == "M"%}
+                        <img src="{% static 'plataforma/img/perfil2.png' %}">
+                    {% else %}
+                        <img src="{% static 'plataforma/img/perfil1.png' %}">
+                    {% endif %}
+                    
                 </div>
                 <br>
-                <p class="dados">Caio Sampaio</p>
-                <p class="dados">22 Anos</p>
+                <p class="dados">{{paciente.nome}}</p>
+                <p class="dados">{{paciente.idade}} Anos</p>
+                <p class="dados">{{paciente.email}}</p>
+                
             </div>
         </a>
     </div>
+    {% endfor %}
     
 </div>  
 
