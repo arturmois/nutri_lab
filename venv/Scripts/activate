@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\artur\Desktop\python_projects\nutri_lab\venv"
+VIRTUAL_ENV="C:\Users\Usuario\Desktop\projects\nutri_lab\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
